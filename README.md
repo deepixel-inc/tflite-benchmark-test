@@ -75,7 +75,7 @@
 </thead>
 <tbody>
   <tr>
-    <td align="center" valign="top">
+    <td align="center" valign="mid">
       <img src="sample/Deepixel Tflite Benchmark_main3.jpg" width="100%"><br>
       <strong>[그림 2] Benchmark Setting 수정 가능 화면</strong>
     </td>
