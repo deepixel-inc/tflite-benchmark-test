@@ -24,7 +24,7 @@
 </thead>
 <tbody>
   <tr>
-    <td align="center" valign="top">
+    <td align="center" valign="mid">
       <img src="sample/Deepixel Tflite Benchmark_main1.jpg" width="100%"><br>
       <strong>[그림 1] TFLite 성능 측정 메인 결과</strong>
     </td>
