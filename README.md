@@ -13,3 +13,54 @@
 | <img src="sample/Deepixel Tflite Benchmark_main3.jpg" width="500"> <br> **[그림 2] Benchmark Setting 수정 가능 화면** | **🛠️ 벤치마크 설정 [Benchmark Setting]** <br> **`1. 기본 실행 설정`** <br> 모델이 구동되는 물리적 환경을 설정합니다. <br> • **Number of Threads (1):** 추론(inference) 프로세스에 할당할 CPU 코어의 개수 <br> • **Target FPS (30.0):** 앱이 목표로 하는 초당 프레임 수 <br> • **Warm-up Runs (10):** 본격적인 측정 전, 캐시 로드 및 하드웨어 가속기(Delegate) 초기화를 위해 사전 실행하는 횟수 <br> • **Benchmark Runs (50):** 통계적 신뢰도를 얻기 위해 반복 수행할 총 횟수 <br><br> **`2. 가속 옵션 (Acceleration Options)`** <br> 모바일 기기의 특수 하드웨어를 활용하여 성능을 극대화하는 설정입니다. <br> • **Use XNNPack (ON):** 부동 소수점(Floating-point) 모델을 위해 설계된 CPU 가속 라이브러리 <br> • **Use NNAPI Acceleration (OFF):** 안드로이드 신경망 API를 통해 하드웨어 가속(GPU, DSP, NPU 등)을 사용할지 여부 |
 
 ---
+
+
+<table width="100%">
+<thead>
+  <tr>
+    <th width="45%">Benchmark 결과 화면</th>
+    <th width="55%">주요 지표 설명</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td align="center" valign="top">
+      <img src="sample/Deepixel Tflite Benchmark_main1.jpg" width="100%"><br>
+      <strong>[그림 1] TFLite 성능 측정 메인 결과</strong>
+    </td>
+    <td>
+
+📂 **모델 로드 및 실행** • **Select Model (.tflite):** 학습된 `tflite 모델`을 선택하여 로드  
+• **Run Benchmark:** 로드된 tflite 모델을 대상으로 종합 프로파일링 데이터 산출 `(Benchmark summary 참고)`  
+
+<br>
+
+**⚙️ 실행 설정 [Current Settings]** 벤치마크 수행 시 적용된 환경 설정값입니다.  
+모델 성능을 측정하기 전, CPU 리소스 할당 및 하드웨어 가속 옵션을 정의하려면 우측 상단 ⚙️를 눌러주세요.` [그림2] 참조`  
+• **Threads (1)**: 추론 시 활용된 CPU 코어 수  
+• **Target FPS (30.0)**: 목표 초당 프레임 수  
+• **Warm-up Runs (10)**: 측정 전 안정화 실행 횟수  
+• **Benchmark Runs (50)**: 실제 통계 데이터를 산출하기 위해 반복 실행한 횟수  
+
+<br>
+
+**📊 벤치마크 요약 [Benchmark Summary]** • **Model Name:** 테스트에 사용된 .tflite 모델 파일명  
+• **Model Size:** 기기에 저장된 모델 파일의 물리적 용량  
+• **Inference Time:** 1회 추론 평균 시간  
+• **Actual FPS:** 실제 측정된 초당 프레임 수  
+• **CPU Usage:** 모델 실행 중 CPU에 가해지는 연산 부하율  
+• **Memory Usage:** 점유 중인 RAM 용량  
+• **CPU Freq:** 벤치마크 중 CPU가 최대 클럭 성능을 얼마나 유지했는지  
+
+<br>
+
+**[❗IMPORTANT❗]** **🚨 정확한 측정을 위한 필독 환경 설정** **1. 전원 관리:** 성능 제한(Throttling) 방지를 위해 `배터리 절전 모드 비활성화` 권장  
+**2. 열 관리:** 발열로 인한 하드웨어 성능 저하를 막기 위해 기기가 `냉각된 상태`에서 측정 권장  
+**3. 전력 공급:** 전압 변동 없는 일정한 출력을 위해 `충전기를 연결한 상태`에서 진행할 것을 권장  
+**4. 정밀도 확보:** &nbsp;&nbsp;&nbsp;&nbsp;• Inference Time은 매 실행 시 변동성이 발생할 수 있어 CPU 최대 클럭(100.00%) 유지 상태에서 진행 권장  
+&nbsp;&nbsp;&nbsp;&nbsp;• 데이터의 정밀도를 위해 `10회 정도 반복 수행 후 평균값`으로 환산을 권장
+
+    </td>
+  </tr>
+</tbody>
+</table>
